@@ -1,0 +1,27 @@
+.navbar {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  list-style-type: none;
+  text-align: center; /* Center the text horizontally */
+  padding: 0;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar li {
+  margin-right: 20px; /* Add some spacing between the links */
+}
+
+.navbar li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.navbar li a:hover {
+  color: #ccc;
+}
