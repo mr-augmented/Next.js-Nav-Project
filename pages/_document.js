@@ -1,7 +1,7 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 import Script from 'next/script'
 
-const source = `https://maps.googleapis.com/maps/api/js?key=${process.env.AIzaSyAS6IH3sM77tCv2x8dkvdFVeJ0PJOdbA7A}&libraries=places`
+const source = `https://maps.googleapis.com/maps/api/js?key=${process.env.API_KEY}&libraries=places`
 
 const Document = () => {
   return (
