@@ -1,12 +1,20 @@
-import Navbar from "/Users/jaylanthompson/Desktop/My Desktop/PROGRAMMING FOLDER/js-folder/components/Navbar.js";
+import { Html, Head, Main, NextScript } from 'next/document'
+import Script from 'next/script'
 
-function Dashboard() {
+const source = `https://maps.googleapis.com/maps/api/js?key=${process.env.AIzaSyAS6IH3sM77tCv2x8dkvdFVeJ0PJOdbA7A}&libraries=places`
+
+const Document = () => {
   return (
-    <div>
-      <Navbar />
-      <h1>Pillar</h1>
-    </div>
-  );
+    <Html>
+      <Head>
+        <Script type="text/javascript" src={source} strategy="beforeInteractive" />
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  )
 }
 
-export default Dashboard;
+export default Document
