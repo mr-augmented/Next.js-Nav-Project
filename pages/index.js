@@ -1,23 +1,24 @@
-import Navbar from "/Users/jaylanthompson/Desktop/My Desktop/PROGRAMMING FOLDER/js-folder/components/Navbar.js";
+import React from "react";
+import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 
-import { useRouter } from "next/router";
+function GoogleMapComponent() {
+  const { isLoaded, loadError } = useLoadScript({
+    googleMapsApiKey: "AIzaSyAS6IH3sM77tCv2x8dkvdFVeJ0PJOdbA7A",
+  });
 
-function Dashboard() {
-  const router = useRouter();
-
-  let pageTitle = "Dashboard";
-  if (router.pathname === "/about") {
-    pageTitle = "About";
-  } else if (router.pathname === "/contact") {
-    pageTitle = "Contact";
-  }
+  if (loadError) return <div>Error loading Google Maps</div>;
+  if (!isLoaded) return <div>Loading Google Maps...</div>;
 
   return (
-    <div>
-      <Navbar />
-      <h1>{pageTitle}</h1>
-    </div>
+    <GoogleMap
+      zoom={10}
+      center={{ lat: 19.020145856138136, lng: -98.24006775697993 }}
+    >
+      <Marker
+        position={{ lat: 19.020145856138136, lng: -98.24006775697993 }}
+      />
+    </GoogleMap>
   );
 }
 
-export default Dashboard;
+export default GoogleMapComponent;
