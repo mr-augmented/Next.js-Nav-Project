@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "/Users/jaylanthompson/Desktop/My Desktop/PROGRAMMING FOLDER/js-folder/styles/navbar.module.css";
+import styles from "../styles/navbar.module.css";
 
 function Navbar() {
   return (

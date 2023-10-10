@@ -1,5 +1,5 @@
-import Navbar from "/Users/jaylanthompson/Desktop/My Desktop/PROGRAMMING FOLDER/js-folder/components/Navbar.js";
-
+import Navbar from "../components/Navbar.js";
+import dynamic from 'next/dynamic';
 import { useRouter } from "next/router";
 
 function Dashboard() {
@@ -12,12 +12,16 @@ function Dashboard() {
     pageTitle = "Contact";
   }
 
-  return (
-    <div>
-      <Navbar />
-      <h1>{pageTitle}</h1>
-    </div>
-  );
+  const MapComponent = dynamic(() => import('../components/MapComponent'), {
+    ssr: false,
+  });
+    
+    return (
+      <div>
+        <h1>Pillar World Creator Studio Beta</h1>
+        <MapComponent />
+      </div>
+    );
 }
 
 export default Dashboard;

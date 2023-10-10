@@ -1,4 +1,4 @@
-import Navbar from "/Users/jaylanthompson/Desktop/My Desktop/PROGRAMMING FOLDER/js-folder/components/Navbar.js";
+import Navbar from "../components/Navbar.js";
 
 function Contact() {
   return (
