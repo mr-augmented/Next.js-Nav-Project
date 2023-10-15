@@ -1,0 +1,128 @@
+.ui-container {
+    position: absolute;
+    top: 2.5vh;
+    left: 2%;
+    width: 35vh;
+    height: 90vh;
+    padding: 1.5vh;
+    border-radius: 4vh;
+    background: #FFF;
+    backdrop-filter: blur(16px);
+    filter: drop-shadow(0px 5px 100px rgba(0, 0, 0, 0.267));
+    overflow: none;
+  }
+  
+  .ui-container::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  .ui-container h1,
+  .ui-container h2 {
+    text-align: left;
+    padding-left: 1vh;
+    margin: 0;
+  }
+
+  .ui-container h1 {
+    font-weight: bold;
+    padding-top: .25vh;
+    font-size: 2.5vh;
+    padding-bottom: 0px;
+  }
+
+  .ui-container h2 {
+    font-weight: normal;
+    padding-top: 0px;
+    font-size: 1.5vh;
+    padding-bottom: 1vh;
+  }
+  
+  .ui-container > * {
+    padding: 1vh;
+    text-align: center;
+  }
+  
+  .form-group {
+    display: grid;
+    padding: 1vh;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    text-align: left;
+    font-size: 1.75vh;
+    padding-top: .5vh;
+    padding-bottom: .5vh;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 95%;
+    height: 2vh;
+    padding: 1vh;
+    border-radius: 1.2vh;
+    border: .3vh solid #CCC;
+    font-size: 1.75vh;
+  }
+  
+  .form-group label .non-bold-text {
+    font-weight: normal;
+  }
+
+  .form-group textarea.description {
+    height: 8vh;
+    border-radius: 1.5vh;
+    resize: none;
+    
+  }
+  
+  .form-group input[type="checkbox"] {
+    width: auto;
+  }
+  
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .save-button, .cancel-button {
+    padding: 1vh;
+    border: none;
+    cursor: pointer;
+    font-size: 1.6vh;
+    height: 3em;
+    border-radius: 1.6vh;
+  }
+  
+  .save-button {
+    color: #FFF;
+    background: #000;
+    font-size: 1.75vh;
+  }
+  
+  .cancel-button {
+    background: #CCC;
+    font-size: 1.75vh;
+  }
+  
+  .custom-upload-label {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 6vh;
+    padding: 0;
+    color: white;
+    cursor: pointer;
+    border-radius: 1.2vh;
+    border: .3vh solid #CCC;
+  }
+  
+  .custom-upload-input {
+    display: none;
+  }
+  
+  .custom-icon {
+    width: 2.5vh;
+    height: 2.5vh;
+  }
