@@ -21,8 +21,8 @@ function MapBox({ setLongitude, setLatitude }) {
   
       const customMarker = document.createElement('div');
       customMarker.style.backgroundImage = 'url(/images/pillar.png)';
-      customMarker.style.width = '5vh';
-      customMarker.style.height = '5vh';
+      customMarker.style.width = '12vh';
+      customMarker.style.height = '12vh';
       customMarker.style.backgroundSize = 'cover';
   
       const marker = new mapboxgl.Marker(customMarker, { draggable: true })
