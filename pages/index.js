@@ -1,27 +1,33 @@
-import Navbar from "../components/Navbar.js";
 import dynamic from 'next/dynamic';
-import { useRouter } from "next/router";
+import React, { useState } from 'react';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
-function Dashboard() {
-  const router = useRouter();
+const Mapbox = dynamic(() => import('../components/Mapbox'), {
+  ssr: false,
+});
 
-  let pageTitle = "Dashboard";
-  if (router.pathname === "/about") {
-    pageTitle = "About";
-  } else if (router.pathname === "/contact") {
-    pageTitle = "Contact";
-  }
+const MapUI = dynamic(() => import('../components/MapUI'), {
+  ssr: false,
+});
 
-  const MapComponent = dynamic(() => import('../components/MapComponent'), {
-    ssr: false,
-  });
-    
-    return (
-      <div>
-        <h1>Pillar World Creator Studio Beta</h1>
-        <MapComponent />
-      </div>
-    );
+function HomePage() {
+  const [longitude, setLongitude] = useState(0);
+  const [latitude, setLatitude] = useState(0);
+
+  return (
+    <div>
+      <MapUI 
+        longitude={longitude} 
+        setLongitude={setLongitude} 
+        latitude={latitude} 
+        setLatitude={setLatitude} 
+      />
+      <Mapbox 
+        setLongitude={setLongitude} 
+        setLatitude={setLatitude} 
+      />
+    </div>
+  );
 }
 
-export default Dashboard;
+export default HomePage;
